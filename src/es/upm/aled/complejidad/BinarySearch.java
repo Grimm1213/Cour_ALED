@@ -6,9 +6,11 @@ public class BinarySearch {
 	
 	private static int binarySearch(int[] list, int lo, int hi,int value) {
 		
+		//DEBERES : recursividad
+		
 		do {
 			int me = (int) Math.floor(lo + (hi-lo)/2);
-			int v = list[me];
+			int v = list[me]; // O(1)
 			
 			if(v==value) {
 				return me;
