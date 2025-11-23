@@ -26,6 +26,7 @@ public class LanzadorTareas {
 		//Este codigo SE BLOQUEA hasta que termine la tarea
 		
 			int resultado = resultadoFuturo.get();
+			System.out.println("Hey");
 			System.out.println(resultado);
 		} catch (InterruptedException  | ExecutionException e) {
 			// TODO Auto-generated catch block

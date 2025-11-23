@@ -1,16 +1,19 @@
 package es.upm.aled.racecondition;
 
-public class Increaser extends Thread{
+public class Increaser extends Thread {
+
+	protected Counter counter;
 	
-	protected Counter c;
-	
-	public Increaser(Counter c) {
-		this.c=c;
+	public Increaser(Counter counter) {
+		super();
+		this.counter = counter;
 	}
+	
+	// Incrementa el contador 1.000.000 de veces
 	@Override
 	public void run() {
-		for(int i = 0;i<1000000;++i) {
-			c.increase();
+		for (int i = 0; i < 1000000; i ++) {
+			counter.increase();
 		}
 	}
 }

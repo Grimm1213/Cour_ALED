@@ -1,25 +1,22 @@
 package es.upm.aled.datastructure;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Pruebas {
 
 	public static void main(String[] args) {
+		// Mi implementación de LinkedList
 		Node primero = new Node(7);
 		Node segundo = new Node(3);
-		primero.setNext(segundo);
 		Node tercero = new Node(10);
-		segundo.setNext(tercero);
+		MiLinkedList lista = new MiLinkedList(primero);
+		lista.addNode(segundo);
+		lista.addNode(tercero);
 		
-		
-		LinkedList lista = new LinkedList(primero);
-		lista.getPrimero().getNext().getValue();
-		
-		
-		//Solo puedo usar principio
-		Node principio = primero;
-		
-		principio.getNext().getNext();//--> estoy en el terero aqui
-		
-
+		// Implementacions de List de Java
+		List<Integer> arrayList = new ArrayList<Integer>(100);
+		List<Integer> linkedList = new LinkedList<Integer>();
 	}
-
 }

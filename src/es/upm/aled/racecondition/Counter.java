@@ -1,25 +1,22 @@
 package es.upm.aled.racecondition;
 
+
 public class Counter {
 
-	protected int count;
+	protected int count = 0;
 	
-	//Region critica
+	// Región crítica
 	public int getCount() {
 		return count;
 	}
 	
-	//Region critica
+	// Región crítica
 	public void setCount(int count) {
 		this.count = count;
 	}
 	
-	//Region critica
+	// Región crítica
 	public void increase() {
-		count++;
+		count++; // Tampoco es atómico
 	}
-		
-
-	
-
 }

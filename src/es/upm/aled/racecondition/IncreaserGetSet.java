@@ -1,23 +1,22 @@
 package es.upm.aled.racecondition;
 
-public class IncreaserGetSet extends Increaser{
-	
-	public IncreaserGetSet(Counter c) {
-		super(c);
+public class IncreaserGetSet extends Increaser {
+
+	public IncreaserGetSet(Counter counter) {
+		super(counter);
 	}
 
+	// Incrementa el contador 1.000.000 de veces
 	@Override
 	public void run() {
-		for(int i = 0;i<1000000;++i) {
-			//START region critica
-			//synchronized(c) {
-				int count = c.getCount();
+		for (int i = 0; i < 1000000; i++) {
+			// START Region Critica
+			synchronized(counter) {
+				int count = counter.getCount();
 				count++;
-				c.setCount(count);
-			//}
-			
-			//END Region critica
+				counter.setCount(count);
+			}
+			// END Region Critica
 		}
 	}
-
 }
