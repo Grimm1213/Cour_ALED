@@ -22,5 +22,5 @@ public class Consumidor extends Thread{
 			dato = buffer.retrieve(id);
 		} catch (InterruptedException e) {}
 	}
-//comentaire
+//comentaire22
 }
